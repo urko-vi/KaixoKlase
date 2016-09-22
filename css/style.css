@@ -133,9 +133,13 @@ header li a{
     45% {left: -100%;}
     50% {left: -200%;}
     70% {left: -200%;}
-    75% {left: 0%;}
-    95% {left: 0%;}
-    100% {left: 0%;}
+    75% {left: -300%;}
+    95% {left: -300%;}
+    100% {left: -400%;}
+}
+/*un div que tenga como id "slider"*/
+div#slider{
+    overflow: hidden;
 }
 
 .primary{
