@@ -2,7 +2,9 @@
 <html lang="es">
 <head>
     <title>Proyecto Clase</title>
+    <!--
     <base href="http://www.diariodeclase.com">
+-->
     <meta charset="UTF-8">
     <!-- para moviles que las medidas sean independinte de las pantallas -->
     <meta name="viewport" content="width=device-width, user-scalable=no">
@@ -17,9 +19,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <header>
+   <header id="inicio">
        <h1  class="primary size7">Diarios de las Clases</h1>
-       <nav>
+       <nav role="menu">
            <ul>
                <li><a href="#dia1"> Dia 1</a></li>
                <li><a href="#"> Dia 2</a></li>
@@ -31,7 +33,15 @@
     <main>
         <div id="slider">
             <figure>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/austin-fireworks.jpg" alt="fuegos_artificiales" title="fuegos artificiales">
+                <!-- download permite la descarga en vez de abrilo en una pestaña  -->
+                <!-- 
+                rel="follow"  -> googlebot va a ir a esa página (los nuestros)
+                rel="no-follow" -> googlebo NO va a ir a esa página los que salgan fuera
+                    --->
+                <a download target="" rel="follow" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/austin-fireworks.jpg">
+                    
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/austin-fireworks.jpg" alt="fuegos_artificiales" title="fuegos artificiales"/>                                                        
+                </a>
                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/taj-mahal_copy.jpg" alt="">
                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ibiza.jpg" alt="">
                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ankor-wat.jpg" alt="">
@@ -63,6 +73,7 @@
     <footer>
     
     </footer>
+    <a href="#inicio">Volver Arriba</a>
   <!-- cragar al final las librerias de JavaScript -->
   <script src="js/main.js" ></script>
 </body>
